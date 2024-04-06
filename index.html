@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-<body>
-<p>Hola mundo</p>
+<body style="font-size: xx-large;">
+<p>Hola, ingresa un número</p>
+<label>Número a : </label>
+<input id="en1" type="number" style="font-size: xx-large;" ><br><br>
+<label>Número b : </label>
+<input id="en2" type="number" style="font-size: xx-large;"><br><br>
+<button onclick="suma()" style="font-size: xx-large;" >a+b</button>
+<button onclick="division()" style="font-size: xx-large;" >a/b</button>
+<button onclick="producto()" style="font-size: xx-large;" >a*b</button>
+<button onclick="resta1()" style="font-size: xx-large;" >a-b</button>
+<button onclick="resta2()" style="font-size: xx-large;" >b-a</button>
+<button onclick="raiz()" style="font-size: xx-large;" ><img src="dibujo.svg" width="30px" ></button>
+<p id="demo1"></p>
 
-<a href="https://www.youtube.com/watch?v=aaEeEpOC-EQ" target="_blank"> Vídeo para crear una página </a>
+<script>
+function suma(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("demo1").innerHTML = Number(a) + Number(b);
+}
+function division(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("demo1").innerHTML = Number(a)/Number(b);
+}
+function producto(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("demo1").innerHTML = Number(a)*Number(b);
+}
+function resta1(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("demo1").innerHTML = Number(a)-Number(b);
+}
+function resta2(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("demo1").innerHTML = Number(b)-Number(a);
+}
+function raiz(){
+    a = document.getElementById("en1").value;
+    document.getElementById("demo1").innerHTML = Math.sqrt(Number(a));
+}
+</script>
+
+
+<a href="https://www.youtube.com/watch?v=aaEeEpOC-EQ" target="_blank">Enlace a vídeo</a>
 
 </body>
 
